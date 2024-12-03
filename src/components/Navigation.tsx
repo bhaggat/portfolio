@@ -52,11 +52,9 @@ function Navigation({ parentToChild, modeChange }: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section);
-    const IntroductionElement = document.getElementById(section);
-    if (IntroductionElement) {
-      IntroductionElement.scrollIntoView({ behavior: "smooth" });
-      console.log("Scrolling to:", IntroductionElement); // Debugging: Ensure the element is found
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     } else {
       console.error('Element with id "Introduction" not found'); // Debugging: Log error if element is not found
     }
