@@ -147,7 +147,7 @@ ol {
   }
 
   .about-section {
-    background-image: url("./assets/bg-light.png");
+    background-image: url("/assets/bg-light.png");
   }
 
   .skills-container svg {
