@@ -4,8 +4,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-import "../assets/styles/Main.scss";
-import { myDetails } from "../constants/constants";
+import "./Main.scss";
+import { myDetails } from "../../constants/constants";
 
 export const socialLinks = (
   <>

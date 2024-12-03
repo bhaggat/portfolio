@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {
   Main,
   Timeline,
-  Expertise,
+  Introduction,
   Project,
   Contact,
   Navigation,
@@ -10,6 +10,7 @@ import {
 } from "./components";
 import FadeIn from "./components/FadeIn";
 import "./index.css";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   const [mode, setMode] = useState("dark");
@@ -35,7 +36,8 @@ function App() {
       <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
       <FadeIn transitionDuration={700}>
         <Main />
-        <Expertise />
+        <Introduction />
+        <Skills />
         <Timeline />
         <Project />
         <Contact />

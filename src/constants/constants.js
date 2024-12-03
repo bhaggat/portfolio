@@ -1,6 +1,6 @@
 export const myDetails = {
   name: "Dhruv Bhagat",
-  title: "Sr. Full Stack Developer",
+  title: "Senior Full Stack Developer",
   gitLink: "https://github.com/bhaggat",
   linkedinLink: "https://www.linkedin.com/in/bhagatdhruv/",
   email: "dhruvbhagat98@gmail.com",
@@ -74,32 +74,93 @@ export const workExperience = [
   },
 ];
 
-export const resumeData = {
-  technicalSkills: {
-    frontend: ["React.js", "React Native", "Flutter", "Ionic", "Angular"],
-    backend: ["Node.js", "Next.js", "Express.js"],
-    databases: ["MongoDB", "Redis", "InfluxDB", "SQL Lite"],
-    cloud: ["AWS", "GitLab CI/CD", "Docker"],
-    tools: ["Jest", "Storybook", "MUI"],
-    others: ["Accessibility (WCAG 2.1)", "Socket.io", "Pusher.js"],
+export const education = [
+  {
+    institution: "Bhagwan Mahavir College Of Management, Surat",
+    degree: "Master of Computer Applications (Integrated)",
+    duration: "March 2013 - March 2018",
   },
-  softSkills: [
+  {
+    institution: "T & TV Nanpura School, Surat",
+    degree: "HSC (Gujarat Board)",
+    duration: "March 2011 - March 2013",
+  },
+];
+
+export const skills = {
+  technical: {
+    Frontend: [
+      "React.js",
+      "React Native",
+      "Flutter",
+      "Ionic 5",
+      "Angular (6)",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+    Backend: ["Node.js", "Next.js", "Express.js"],
+    Database: [
+      "MongoDB (NoSQL)",
+      "SQL Lite (On Mobile)",
+      "Redis (In Memory) with adaptor",
+      "InfluxDB (Analytics)",
+    ],
+    Firebase: [
+      "Auth",
+      "Firestore",
+      "Realtime Database",
+      "Messaging/Notifications",
+      "Storage",
+      "Crashlytics ",
+    ],
+    "State Management": [
+      "Redux Core",
+      "Redux Toolkit",
+      "RTK Query",
+      "Context API",
+      "DVA",
+    ],
+    "DevOps & Cloud": [
+      "AWS (EC2",
+      "S3",
+      "CloudFront)",
+      "GitLab CI/CD",
+      "Docker",
+      "Gitlab Pipelines",
+      "Github Actions",
+    ],
+    "Real-Time & Integrations": [
+      "Socket.io",
+      "Pusher.js",
+      "Agora.io",
+      "Shopify API",
+      "ClickUp API",
+      "REST API",
+    ],
+    Payments: [
+      "Stripe",
+      "Razorpay",
+      "Accept Payments",
+      "Google In-App Purchase",
+      "Apple In-App Purchase",
+    ],
+    "Testing & UI": ["Jest", "Storybook", "MUI", "AntD", "React Native Paper"],
+    "Code Quality": ["TypeScript", "ESLint", "Prettier"],
+    Other: [
+      "Accessibility (WCAG 2.1)",
+      "Puppeteer",
+      "Axe core",
+      "Joi",
+      "Docker",
+      "i18n",
+    ],
+  },
+  soft: [
     "Leadership & Team Management",
     "Agile Project Management (Scrum)",
     "Strong Communication & Collaboration",
     "Quick Learning & Adaptability",
-  ],
-  education: [
-    {
-      institution: "Bhagwan Mahavir College Of Management, Surat",
-      degree: "Master of Computer Applications (Integrated)",
-      duration: "March 2013 - March 2018",
-    },
-    {
-      institution: "T & TV Nanpura School, Surat",
-      degree: "HSC (Gujarat Board)",
-      duration: "March 2011 - March 2013",
-    },
   ],
 };
 

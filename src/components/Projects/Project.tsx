@@ -1,8 +1,6 @@
 import React from "react";
-import mock10 from "../assets/images/mock10.png";
-
-import "../assets/styles/Project.scss";
-import { projects } from "../constants/constants";
+import "./Project.scss";
+import { projects } from "../../constants/constants";
 import LinkIcon from "@mui/icons-material/OpenInNew";
 import AppleIcon from "@mui/icons-material/Apple";
 import AdbIcon from "@mui/icons-material/Adb";
@@ -17,9 +15,7 @@ function Project() {
             <div className="project" key={project.title}>
               <a target="_blank" rel="noreferrer">
                 <img
-                  src={
-                    project.thumbnail ? `./assets/${project.thumbnail}` : mock10
-                  }
+                  src={`./assets/${project.thumbnail}`}
                   alt={project.title}
                   style={{
                     aspectRatio: "2/1",

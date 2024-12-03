@@ -19,6 +19,7 @@ import Toolbar from "@mui/material/Toolbar";
 const drawerWidth = 240;
 const navItems = [
   ["Introduction", "introduction"],
+  ["Skills", "skills"],
   ["History", "history"],
   ["Projects", "projects"],
   ["Contact", "contact"],
@@ -52,12 +53,12 @@ function Navigation({ parentToChild, modeChange }: any) {
 
   const scrollToSection = (section: string) => {
     console.log(section);
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: "smooth" });
-      console.log("Scrolling to:", expertiseElement); // Debugging: Ensure the element is found
+    const IntroductionElement = document.getElementById(section);
+    if (IntroductionElement) {
+      IntroductionElement.scrollIntoView({ behavior: "smooth" });
+      console.log("Scrolling to:", IntroductionElement); // Debugging: Ensure the element is found
     } else {
-      console.error('Element with id "expertise" not found'); // Debugging: Log error if element is not found
+      console.error('Element with id "Introduction" not found'); // Debugging: Log error if element is not found
     }
   };
 

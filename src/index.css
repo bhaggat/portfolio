@@ -29,8 +29,13 @@ a:hover {
     border-color 0.15s ease-in-out;
 }
 
+h3,
 h2 {
   margin: 0.5rem 0;
+}
+
+h3 + ul {
+  margin-top: 0;
 }
 
 p,
@@ -142,7 +147,7 @@ ol {
   }
 
   .about-section {
-    background-image: url("./assets/images/bg-light.png");
+    background-image: url("./assets/bg-light.png");
   }
 
   .skills-container svg {
