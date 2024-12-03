@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import "./Contact.scss";
-// import emailjs from '@emailjs/browser';
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import TextField from "@mui/material/TextField";
+import { CircularProgress } from "@mui/material";
 
 function Contact() {
   const [name, setName] = useState<string>("");
@@ -15,37 +15,41 @@ function Contact() {
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const form = useRef();
 
-  const sendEmail = (e: any) => {
+  const sendEmail = async (e: any) => {
     e.preventDefault();
-
     setNameError(name === "");
     setEmailError(email === "");
     setMessageError(message === "");
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+    try {
+      if (name && email && message) {
+        setIsLoading(true);
+        const res = await fetch("http://13.233.156.34/api/send-email", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+          }),
+        }).then(function (res) {
+          return res.json();
+        });
+        console.log("res", res);
+        setName("");
+        setEmail("");
+        setMessage("");
+      }
+    } catch (er) {
+      console.log(er);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -132,7 +136,7 @@ function Contact() {
               endIcon={<SendIcon />}
               onClick={sendEmail}
             >
-              Send
+              {isLoading ? <CircularProgress /> : "Send"}
             </Button>
           </Box>
         </div>
