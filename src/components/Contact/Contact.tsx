@@ -5,6 +5,8 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import TextField from "@mui/material/TextField";
 import { CircularProgress } from "@mui/material";
+import { firestore } from "../firebase";
+import { collection, addDoc } from "firebase/firestore"; 
 
 function Contact() {
   const [name, setName] = useState<string>("");
@@ -26,21 +28,13 @@ function Contact() {
     try {
       if (name && email && message) {
         setIsLoading(true);
-        const res = await fetch("http://13.233.156.34/api/send-email", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            message,
-          }),
-        }).then(function (res) {
-          return res.json();
+       await addDoc(collection(firestore, "users"), {
+          name,
+          email,
+          message,
+          timestamp: new Date().toISOString(),
         });
-        console.log("res", res);
+       
         setName("");
         setEmail("");
         setMessage("");
