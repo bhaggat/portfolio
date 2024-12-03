@@ -14,7 +14,7 @@ export const myDetails = {
 
 export const workExperience = [
   {
-    role: "Team Leader",
+    role: "Technical Team Leader",
     company: "Webosmotic Pvt. Ltd.",
     location: "Surat",
     start: "Sept 2022",
