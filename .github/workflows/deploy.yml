@@ -1,38 +1,31 @@
-name: Deploy to EC2
+name: Deploy Vite App to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main # Deploy when pushing to the main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          ssh-private-key: ${{ secrets.EC2_DEPLOY_KEY }}
+          node-version: 18 # Specify your Node.js version
 
-      - name: Deploy to EC2
-        env:
-          HOST: ${{ secrets.EC2_PUBLIC_IP }}
-          USER: ubuntu
-        run: |
-          ssh -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
-            if [ ! -d "/home/ubuntu/app" ]; then
-              mkdir -p /home/ubuntu/app
-              git clone git@github.com:bhaggat/portfolio-node.git /home/ubuntu/app
-            else
-              cd /home/ubuntu/app
-              git pull origin main
-            fi
-            cd /home/ubuntu/app
-            npm install --omit=dev
-            pm2 stop all || true
-            pm2 start index.js --name "node-api"
-          EOF
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
