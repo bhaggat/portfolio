@@ -5,16 +5,20 @@ import { visualizer } from "rollup-plugin-visualizer";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/portfolio/", // Replace with your repository name
+  base: "/portfolio/",
   build: {
     minify: "esbuild",
     rollupOptions: {
       plugins: [
         visualizer({
-          filename: "stats.html", // Output file
-          open: true, // Automatically open the file in your browser
+          filename: "stats.html",
         }),
       ],
+      output: {
+        chunkFileNames: "assets/[name].js",
+        entryFileNames: "[name].js",
+        assetFileNames: "[name].[ext]",
+      },
     },
   },
 });
