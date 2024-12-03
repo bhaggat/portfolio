@@ -1,7 +1,5 @@
 import React from "react";
-import "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -25,7 +23,13 @@ function Timeline() {
                 contentArrowStyle={{ borderRight: "7px solid  white" }}
                 date={`${experience.start} - ${experience.end}`}
                 iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
-                icon={<FontAwesomeIcon icon={faBriefcase} />}
+                icon={
+                  <BusinessCenterIcon
+                    sx={{
+                      color: "white",
+                    }}
+                  />
+                }
               >
                 <h3 className="vertical-timeline-element-title">
                   {experience.company}

@@ -6,6 +6,8 @@ import PhoneIcon from "@mui/icons-material/Phone";
 
 import "./Main.scss";
 import { myDetails } from "../../constants/constants";
+import { Button } from "@mui/material";
+import DownloadIcon from "@mui/icons-material/Download";
 
 export const socialLinks = (
   <>
@@ -44,6 +46,7 @@ export const socialLinks = (
   </>
 );
 function Main() {
+  function downloadResume() {}
   return (
     <div className="container">
       <div className="about-section">
@@ -54,7 +57,15 @@ function Main() {
           <div className="social_icons">{socialLinks}</div>
           <h1>{myDetails.name}</h1>
           <p>{myDetails.title}</p>
-
+          <Button
+            variant="contained"
+            endIcon={<DownloadIcon />}
+            onClick={downloadResume}
+            href={"./Dhruv MERN CV.pdf"}
+            download={true}
+          >
+            Resume
+          </Button>
           <div className="mobile_social_icons">{socialLinks}</div>
         </div>
       </div>
