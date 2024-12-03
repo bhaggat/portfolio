@@ -133,10 +133,12 @@ function Contact() {
             />
             <Button
               variant="contained"
-              endIcon={<SendIcon />}
+              endIcon={
+                isLoading ? <CircularProgress size={24} /> : <SendIcon />
+              }
               onClick={sendEmail}
             >
-              {isLoading ? <CircularProgress /> : "Send"}
+              Send
             </Button>
           </Box>
         </div>
