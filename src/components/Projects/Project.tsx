@@ -1,10 +1,6 @@
 import React from "react";
 import "./Project.scss";
 import { projects, technologiesIconMapper } from "../../constants/constants";
-import LinkIcon from "@mui/icons-material/OpenInNew";
-import AppleIcon from "@mui/icons-material/Apple";
-import AdbIcon from "@mui/icons-material/Adb";
-import { Image } from "@mui/icons-material";
 import TooltipWrapper from "../TooltipWrapper/TooltipWrapper";
 
 function Project() {
@@ -61,11 +57,11 @@ function Project() {
                   }}
                 >
                   {Object.keys(project.links).map((linkType) => {
-                    let Icon = LinkIcon;
+                    let icon = "external-link.svg";
                     if (linkType === "playStoreLink") {
-                      Icon = AdbIcon;
+                      icon = "google-play-store.png";
                     } else if (linkType === "appStore") {
-                      Icon = AppleIcon;
+                      icon = "apple-app-store.svg";
                     }
                     return (
                       <a
@@ -73,17 +69,13 @@ function Project() {
                         key={linkType}
                         rel="noreferrer"
                         href={project.links[linkType]}
-                        style={{
-                          height: 35,
-                          width: 35,
-                          display: "flex",
-                          border: "1.5px solid",
-                          borderRadius: "50%",
-                          justifyContent: "center",
-                          alignItems: "center",
-                        }}
+                        className="externalLink"
                       >
-                        <Icon />
+                        <img
+                          src={`./assets/icons/${icon}`}
+                          className="linkIcon"
+                          alt={linkType}
+                        />
                       </a>
                     );
                   })}
