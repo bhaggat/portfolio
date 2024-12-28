@@ -220,7 +220,7 @@ export const projects = [
       "Fetch SMS messages from the device inbox with advanced filtering options.",
       "Listen for incoming SMS messages in real-time.",
     ],
-    technologies: ["React Native", "NPM Package"],
+    technologies: ["React Native", "NPM Package", "TypeScript"],
     thumbnail: "react-native-sms-module.png",
     links: {
       webLink: "https://www.npmjs.com/package/react-native-sms-module",
@@ -334,7 +334,13 @@ export const projects = [
       "Developed a marketplace app for connecting farmers and makers.",
       "Implemented video content sharing and integrated Shopify stores with Stripe payments.",
     ],
-    technologies: ["React Native", "Firebase", "Shopify API", "Stripe"],
+    technologies: [
+      "React Native",
+      "Firebase",
+      "Firestore",
+      "Shopify API",
+      "Stripe",
+    ],
     thumbnail: "cultisan.png",
   },
   {
@@ -376,7 +382,7 @@ export const projects = [
       "Built a custom Gantt chart library without third-party dependencies.",
       "Optimized performance for large datasets using virtualization.",
     ],
-    technologies: ["React.js"],
+    technologies: ["React.js", "NPM Package"],
     thumbnail: "gantt.png",
   },
   {
