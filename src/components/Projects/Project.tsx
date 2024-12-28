@@ -1,9 +1,11 @@
 import React from "react";
 import "./Project.scss";
-import { projects } from "../../constants/constants";
+import { projects, technologiesIconMapper } from "../../constants/constants";
 import LinkIcon from "@mui/icons-material/OpenInNew";
 import AppleIcon from "@mui/icons-material/Apple";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Image } from "@mui/icons-material";
+import TooltipWrapper from "../TooltipWrapper/TooltipWrapper";
 
 function Project() {
   return (
@@ -28,7 +30,23 @@ function Project() {
               <a target="_blank" rel="noreferrer">
                 <h2>{project.title}</h2>
               </a>
-              <p>{project.technologies.join(", ")}</p>
+              <div
+                style={{
+                  display: "flex",
+                  gap: 4,
+                }}
+              >
+                {project.technologies.map((technology) => (
+                  <TooltipWrapper tooltipText={technology} key={technology}>
+                    <img
+                      src={`./assets/icons/${technologiesIconMapper[technology]}`}
+                      alt={technology}
+                      className="techImage"
+                    />
+                  </TooltipWrapper>
+                ))}
+              </div>
+              <p>{project.description}</p>
               <ul>
                 {project.highlights?.map((highlight) => {
                   return <li key={highlight}>{highlight}</li>;

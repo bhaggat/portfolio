@@ -32,18 +32,17 @@ function Timeline() {
                 }
               >
                 <h3 className="vertical-timeline-element-title">
-                  {experience.company}
+                  {experience.role}
                 </h3>
                 <h4 className="vertical-timeline-element-subtitle">
                   {experience.location}
                 </h4>
-                <p>{experience.role}</p>
+                <p>{experience.company}</p>
                 <ul>
                   {experience.responsibilities.map((responsibility) => {
                     return <li key={responsibility}>{responsibility}</li>;
                   })}
                 </ul>
-                {/* <p>{experience.responsibilities}</p> */}
               </VerticalTimelineElement>
             );
           })}
