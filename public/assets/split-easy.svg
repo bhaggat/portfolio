@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Vibrant gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <!-- Accent gradient for highlights -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle with gradient and subtle shadow -->
+  <circle cx="60" cy="60" r="56" fill="url(#mainGradient)"/>
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#1e40af" stroke-width="1" opacity="0.15"/>
+  
+  <!-- Main design: Four pieces splitting apart (representing expense splitting) -->
+  <g transform="translate(60, 60)">
+    <!-- Top-left piece with slight offset for dynamic feel -->
+    <path d="M -2,-2 L -30,-30 A 30,30 0 0,1 0,-30 Z" fill="white" opacity="0.98"/>
+    
+    <!-- Top-right piece -->
+    <path d="M 2,-2 L 30,-30 A 30,30 0 0,0 0,-30 Z" fill="white" opacity="0.98"/>
+    
+    <!-- Bottom-left piece -->
+    <path d="M -2,2 L -30,30 A 30,30 0 0,0 0,30 Z" fill="white" opacity="0.98"/>
+    
+    <!-- Bottom-right piece -->
+    <path d="M 2,2 L 30,30 A 30,30 0 0,1 0,30 Z" fill="white" opacity="0.98"/>
+    
+    <!-- Center connecting element (represents shared expenses) -->
+    <circle cx="0" cy="0" r="12" fill="url(#accentGradient)"/>
+    
+    <!-- Equal sign in center (representing fair splitting) -->
+    <line x1="-7" y1="-2" x2="7" y2="-2" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-7" y1="2" x2="7" y2="2" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Decorative elements: Small circles representing group members -->
+  <circle cx="18" cy="18" r="4" fill="white" opacity="0.9"/>
+  <circle cx="102" cy="18" r="4" fill="white" opacity="0.9"/>
+  <circle cx="18" cy="102" r="4" fill="white" opacity="0.9"/>
+  <circle cx="102" cy="102" r="4" fill="white" opacity="0.9"/>
+  
+  <!-- Subtle connecting lines (representing group connections) -->
+  <line x1="60" y1="60" x2="18" y2="18" stroke="white" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+  <line x1="60" y1="60" x2="102" y2="18" stroke="white" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+  <line x1="60" y1="60" x2="18" y2="102" stroke="white" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+  <line x1="60" y1="60" x2="102" y2="102" stroke="white" stroke-width="1.5" opacity="0.25" stroke-linecap="round"/>
+</svg>

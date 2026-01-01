@@ -198,6 +198,36 @@ export const technologiesIconMapper = {
 };
 export const projects = [
   {
+    title: "Split Easy",
+    description:
+      "Effortlessly Split Expenses with Friends & Family.",
+    highlights: [
+      "Expense Tracking: Easily add, categorize, and track expenses with detailed analytics.",
+      "Group Management: Create and manage multiple groups for different social circles.",
+      "Smart Bill Splitting: Automatically split bills equally, by percentage, or by custom amounts.",
+    ],
+    technologies: ["React.js", "TypeScript", "CSS", "Firebase", "Firestore"],
+    thumbnail: "split-easy.svg",
+    links: {
+      webLink: "http://split-eazy.netlify.app/",
+    },
+  },
+  {
+    title: "Kachuful Score Tracker",
+    description:
+      "A modern, responsive web application for tracking scores in the traditional Gujarati card game Kachuful.",
+    highlights: [
+      "Multi-player support tracking up to 8 players simultaneously with flexible round patterns.",
+      "Progressive Web App (PWA) support with offline functionality and installable capabilities.",
+      "Smart scoring system with configurable rules, real-time tracking, and detailed game history.",
+    ],
+    technologies: ["React.js", "TypeScript", "CSS"],
+    thumbnail: "kachuful.svg",
+    links: {
+      webLink: "https://kachuful-score.netlify.app/",
+    },
+  },
+  {
     title: "Scheduled Website Opener (Personal)",
     description:
       "A Chrome extension that automates website opening based on a customizable schedule.",

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Project.scss";
 import { projects, technologiesIconMapper } from "../../constants/constants";
 import TooltipWrapper from "../TooltipWrapper/TooltipWrapper";
@@ -10,7 +11,12 @@ function Project() {
       <div className="projects-grid">
         {projects.map((project) => {
           return (
-            <div className="project" key={project.title}>
+            <motion.div
+              className="project"
+              key={project.title}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
               <a target="_blank" rel="noreferrer">
                 <img
                   src={`./assets/${project.thumbnail}`}
@@ -81,7 +87,7 @@ function Project() {
                   })}
                 </div>
               )}
-            </div>
+            </motion.div>
           );
         })}
       </div>

@@ -56,7 +56,7 @@ ol {
 
 .navigation-bar {
   justify-content: space-between;
-  background-color: #0d1116;
+  /* background-color: #0d1116;  Removed to allow AppBar glass effect */
 
   button {
     font-size: 1.1rem;

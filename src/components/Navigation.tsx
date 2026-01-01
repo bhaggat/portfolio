@@ -93,6 +93,11 @@ function Navigation({ parentToChild, modeChange }: any) {
         component="nav"
         id="navigation"
         className={`navbar-fixed-top${scrolled ? " scrolled" : ""}`}
+        sx={{
+          backgroundColor: scrolled ? "rgba(13, 17, 22, 0.8)" : "transparent",
+          backdropFilter: "blur(10px)",
+          boxShadow: scrolled ? "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)" : "none",
+        }}
       >
         <Toolbar className="navigation-bar">
           <IconButton

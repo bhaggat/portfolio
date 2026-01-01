@@ -8,7 +8,7 @@ import {
   Navigation,
   Footer,
 } from "./components";
-import FadeIn from "./components/FadeIn";
+import ScrollReveal from "./components/ScrollReveal";
 import "./index.css";
 import Skills from "./components/Skills/Skills";
 
@@ -34,14 +34,24 @@ function App() {
       }`}
     >
       <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
-      <FadeIn transitionDuration={700}>
+      <ScrollReveal width="100%">
         <Main />
+      </ScrollReveal>
+      <ScrollReveal width="100%">
         <Introduction />
+      </ScrollReveal>
+      <ScrollReveal width="100%">
         <Skills />
+      </ScrollReveal>
+      <ScrollReveal width="100%">
         <Timeline />
+      </ScrollReveal>
+      <ScrollReveal width="100%">
         <Project />
+      </ScrollReveal>
+      <ScrollReveal width="100%">
         <Contact />
-      </FadeIn>
+      </ScrollReveal>
       <Footer />
     </div>
   );
