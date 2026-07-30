@@ -233,7 +233,7 @@ export const personalProjects = [
     thumbnail: "split-easy.svg",
     showFullImage: true,
     links: {
-      webLink: "http://split-eazy.netlify.app/",
+      webLink: "https://split-eazy.bhaggat.in/home",
       playStoreLink:
         "https://play.google.com/store/apps/details?id=io.bhagatdhruv.spliteasy",
     },
@@ -251,9 +251,7 @@ export const personalProjects = [
     thumbnail: "kachuful.png",
     showFullImage: true,
     links: {
-      webLink: "https://kachuful-score.netlify.app/",
-      playStoreLink:
-        "https://play.google.com/store/apps/details?id=io.bhagatdhruv.kachuful",
+      webLink: "https://kachuful-score.bhaggat.in",
     },
   },
   {
