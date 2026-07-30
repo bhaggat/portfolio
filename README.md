@@ -4,7 +4,7 @@ A professional and interactive portfolio website showcasing the skills, experien
 
 ## 🚀 Live Demo
 
-Check out the live site here: [https://bhaggat.github.io/portfolio](https://bhaggat.github.io/portfolio)
+Check out the live site here: [https://me.bhaggat.in](https://me.bhaggat.in)
 
 ## ✨ Features
 

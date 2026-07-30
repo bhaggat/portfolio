@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bhaggat.github.io/portfolio",
+  "homepage": "https://me.bhaggat.in",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
