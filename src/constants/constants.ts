@@ -251,7 +251,7 @@ export const personalProjects = [
     thumbnail: "kachuful.png",
     showFullImage: true,
     links: {
-      webLink: "https://kachuful-score.bhaggat.in",
+      webLink: "https://kachuful.bhaggat.in/",
     },
   },
   {
