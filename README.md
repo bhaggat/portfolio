@@ -78,11 +78,9 @@ src/
 
 ### Deployment
 
-To deploy the project to GitHub Pages:
+This project is automatically deployed to GitHub Pages via GitHub Actions.
 
-```bash
-npm run deploy
-```
+Any push to the `main` branch will trigger the workflow defined in `.github/workflows/deploy.yml` and publish the site.
 
 ## 🤝 Contact
 
