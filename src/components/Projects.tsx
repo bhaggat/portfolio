@@ -29,9 +29,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
     ? project.technologies
     : project.technologies.slice(0, 4);
 
+  const hiddenCount = project.technologies.length - 4;
+
   return (
     <div className="project-card">
       <div className="project-content">
+        {/* Header: title + links */}
         <div className="project-header">
           <h3 className="project-title">{project.title}</h3>
           <div className="project-links">
@@ -46,13 +49,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     rel="noopener noreferrer"
                     aria-label={key}
                   >
-                    {Icon && <Icon size={20} style={{ color }} />}
+                    {Icon && <Icon size={16} style={{ color }} />}
                   </a>
                 );
               })}
           </div>
         </div>
 
+        {/* Thumbnail */}
         {project.thumbnail && (
           <div className="project-thumbnail">
             <img
@@ -65,18 +69,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         )}
 
+        {/* Description */}
         <p className="project-description">{project.description}</p>
 
+        {/* Highlights */}
         {project.highlights && (
           <ul className="project-highlights">
-            {project.highlights
-              .slice(0, 2)
-              .map((highlight: string, i: number) => (
-                <li key={i}>{highlight}</li>
-              ))}
+            {project.highlights.slice(0, 2).map((highlight: string, i: number) => (
+              <li key={i}>{highlight}</li>
+            ))}
           </ul>
         )}
 
+        {/* Tech Stack */}
         <div className="project-tech">
           {displayedTech.map((tech: string, i: number) => {
             const { icon: Icon, color } = getTechIcon(tech);
@@ -84,28 +89,28 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <span
                 key={i}
                 className="tech-tag"
-                style={{ border: `1px solid ${color || "transparent"}` }}
+                style={{ borderColor: color ? `${color}44` : undefined }}
               >
                 {Icon && (
                   <Icon
                     style={{
                       color: color,
-                      marginRight: "4px",
-                      verticalAlign: "middle",
+                      flexShrink: 0,
                     }}
+                    size={11}
                   />
                 )}
                 {tech}
               </span>
             );
           })}
-          {!showAllTech && project.technologies.length > 4 && (
+          {!showAllTech && hiddenCount > 0 && (
             <span
-              className="tech-tag"
+              className="tech-tag tech-tag-more"
               onClick={() => setShowAllTech(true)}
-              style={{ cursor: "pointer" }}
+              title={`Show ${hiddenCount} more`}
             >
-              +{project.technologies.length - 4}
+              +{hiddenCount} more
             </span>
           )}
         </div>
@@ -114,47 +119,56 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
+/* ── Reusable company group component ── */
+interface CompanyGroupProps {
+  name: string;
+  projects: Project[];
+}
+
+const CompanyGroup = ({ name, projects }: CompanyGroupProps) => (
+  <div className="company-group">
+    <div className="company-group-header">
+      <div className="company-group-dot" />
+      <span className="company-group-title">{name}</span>
+      <div className="company-group-header-line" />
+    </div>
+    <div className="projects-grid">
+      {projects.map((project) => (
+        <ProjectCard key={`${name}-${project.title}`} project={project} />
+      ))}
+    </div>
+  </div>
+);
+
 const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
+        {/* Personal Projects */}
         <h2 className="section-title">Personal Projects</h2>
-        <div className="projects-grid">
+        <div className="section-label" style={{ marginTop: "-2.5rem", marginBottom: "3rem" }}>
+          <div className="section-label-line" />
+          <span className="section-label-badge">Side Hustles &amp; OSS</span>
+          <div className="section-label-line right" />
+        </div>
+
+        <div className="projects-grid" style={{ marginBottom: "var(--spacing-xl)" }}>
           {personalProjects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
 
-        <h2
-          className="section-title"
-          style={{ marginTop: "var(--spacing-xl)" }}
-        >
-          Professional Work
-        </h2>
-
-        <h3 className="subsection-title">Jeavio Private Limited</h3>
-        <div className="projects-grid">
-          {jeavioProjects.map((project) => (
-            <ProjectCard key={`jeavio-${project.title}`} project={project} />
-          ))}
+        {/* Professional Work */}
+        <h2 className="section-title">Professional Work</h2>
+        <div className="section-label" style={{ marginTop: "-2.5rem", marginBottom: "3rem" }}>
+          <div className="section-label-line" />
+          <span className="section-label-badge">Client &amp; Company Projects</span>
+          <div className="section-label-line right" />
         </div>
 
-        <h3 className="subsection-title">Webosmotic Private Limited</h3>
-        <div className="projects-grid">
-          {webosmoticProjects.map((project) => (
-            <ProjectCard
-              key={`webosmotic-${project.title}`}
-              project={project}
-            />
-          ))}
-        </div>
-
-        <h3 className="subsection-title">Bcube Solutions</h3>
-        <div className="projects-grid">
-          {bcubeProjects.map((project) => (
-            <ProjectCard key={`bcube-${project.title}`} project={project} />
-          ))}
-        </div>
+        <CompanyGroup name="Jeavio Private Limited" projects={jeavioProjects} />
+        <CompanyGroup name="Webosmotic Private Limited" projects={webosmoticProjects} />
+        <CompanyGroup name="Bcube Solutions" projects={bcubeProjects} />
       </div>
     </section>
   );
