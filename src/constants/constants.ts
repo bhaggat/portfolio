@@ -188,40 +188,6 @@ export const skills = {
 
 export const personalProjects = [
   {
-    title: "Git Pull Watched",
-    description:
-      "A VS Code extension to automatically run database migrations and scripts when git pull changes files. Works with Prisma, Mongo, and more.",
-    highlights: [
-      "Automatically detect changes in files like schema.prisma or package.json after a git pull.",
-      "Execute custom commands or built-in scripts to keep your development environment in sync.",
-      "Support for multiple environments and custom execution rules.",
-    ],
-    technologies: ["VS Code Extension", "TypeScript", "Node.js"],
-    thumbnail: "git-pull-watched.png",
-    showFullImage: true,
-    links: {
-      webLink:
-        "https://marketplace.visualstudio.com/items?itemName=DhruvBhagat.git-pull-watched",
-    },
-  },
-  {
-    title: "React Native SMS Module",
-    description:
-      "A modern React Native library for Android to fetch and monitor SMS messages with real-time event triggers.",
-    highlights: [
-      "Real-time Listening: Monitor incoming SMS messages as they arrive on the device.",
-      "Inbox Access: Fetch SMS messages from the device inbox with advanced filtering options.",
-      "Modern Architecture: Built with support for React Native's latest TurboModule architecture.",
-      "Advanced Filtering: Filter messages by sender (phone number), specific keywords, date range, and read/unread status.",
-    ],
-    technologies: ["React Native", "NPM Package", "TypeScript"],
-    thumbnail: "Npm-logo.svg.png",
-    links: {
-      webLink: "https://www.npmjs.com/package/react-native-sms-module",
-      githubLink: "https://github.com/bhaggat/react-native-sms-module",
-    },
-  },
-  {
     title: "Split Easy",
     description: "Effortlessly Split Expenses with Friends & Family.",
     highlights: [
@@ -234,8 +200,19 @@ export const personalProjects = [
     showFullImage: true,
     links: {
       webLink: "https://split-eazy.bhaggat.in/home",
-      playStoreLink:
-        "https://play.google.com/store/apps/details?id=io.bhagatdhruv.spliteasy",
+    },
+  },
+  {
+    title: "Xpenso",
+    description: "A comprehensive offline expense management app.",
+    highlights: [
+      "Developed an expense management app with offline data storage using SQLite.",
+      "Designed an intuitive interface with smart suggestions for expenses.",
+    ],
+    technologies: ["Ionic 4", "React Native", "SQLite"],
+    thumbnail: "xpenso.png",
+    links: {
+      webLink: "https://xpenso.bhaggat.in",
     },
   },
   {
@@ -271,17 +248,37 @@ export const personalProjects = [
     },
   },
   {
-    title: "Xpenso",
-    description: "A comprehensive offline expense management app.",
+    title: "Git Pull Watched",
+    description:
+      "A VS Code extension to automatically run database migrations and scripts when git pull changes files. Works with Prisma, Mongo, and more.",
     highlights: [
-      "Developed an expense management app with offline data storage using SQLite.",
-      "Designed an intuitive interface with smart suggestions for expenses.",
+      "Automatically detect changes in files like schema.prisma or package.json after a git pull.",
+      "Execute custom commands or built-in scripts to keep your development environment in sync.",
+      "Support for multiple environments and custom execution rules.",
     ],
-    technologies: ["Ionic 4", "React Native", "SQLite"],
-    thumbnail: "xpenso.png",
+    technologies: ["VS Code Extension", "TypeScript", "Node.js"],
+    thumbnail: "git-pull-watched.png",
+    showFullImage: true,
     links: {
-      playStoreLink:
-        "https://play.google.com/store/apps/details?id=io.bhagatdhruv.xpenso2&hl=en_IN",
+      webLink:
+        "https://marketplace.visualstudio.com/items?itemName=DhruvBhagat.git-pull-watched",
+    },
+  },
+  {
+    title: "React Native SMS Module",
+    description:
+      "A modern React Native library for Android to fetch and monitor SMS messages with real-time event triggers.",
+    highlights: [
+      "Real-time Listening: Monitor incoming SMS messages as they arrive on the device.",
+      "Inbox Access: Fetch SMS messages from the device inbox with advanced filtering options.",
+      "Modern Architecture: Built with support for React Native's latest TurboModule architecture.",
+      "Advanced Filtering: Filter messages by sender (phone number), specific keywords, date range, and read/unread status.",
+    ],
+    technologies: ["React Native", "NPM Package", "TypeScript"],
+    thumbnail: "Npm-logo.svg.png",
+    links: {
+      webLink: "https://www.npmjs.com/package/react-native-sms-module",
+      githubLink: "https://github.com/bhaggat/react-native-sms-module",
     },
   },
 ];
