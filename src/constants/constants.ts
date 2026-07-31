@@ -245,8 +245,7 @@ export const personalProjects = [
     thumbnail: "chrome-schaduler.png",
     showFullImage: true,
     links: {
-      webLink:
-        "https://chromewebstore.google.com/detail/scheduled-website-opener/peimippheccjbhianpahacphickkbbjl",
+      webLink: "https://scheduler.bhaggat.in",
     },
   },
   {
