@@ -1,7 +1,7 @@
 import { myDetails } from "../constants/constants";
 import { getAssetUrl } from "../utils/assets";
-import { FaLinkedin, FaDownload } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import "./Hero.css";
 
 const Hero = () => {
@@ -45,39 +45,45 @@ const Hero = () => {
                 href={myDetails.linkedinLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary btn-with-icon"
+                className="hero-link-btn hero-linkedin"
                 aria-label="Connect on LinkedIn"
                 title="Connect on LinkedIn"
               >
-                <span className="btn-icon">
-                  <FaLinkedin size={18} />
+                <span className="hero-link-icon">
+                  <FaLinkedin size={20} />
                 </span>
-                <span className="btn-label">Connect on LinkedIn</span>
+                <span className="hero-link-text">Connect on LinkedIn</span>
+                <FiExternalLink className="hero-link-arrow" size={14} />
               </a>
-              <a
-                href={`mailto:${myDetails.email}`}
-                className="btn btn-outline btn-with-icon"
-                aria-label="Contact via Email"
-                title="Contact via Email"
-              >
-                <span className="btn-icon">
-                  <MdEmail size={18} />
-                </span>
-                <span className="btn-label">Contact Me</span>
-              </a>
+
               <a
                 href={getAssetUrl(`assets/${myDetails.resume}`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline btn-with-icon"
+                className="hero-link-btn hero-resume"
                 download
                 aria-label="Download Resume"
                 title="Download Resume"
               >
-                <span className="btn-icon">
-                  <FaDownload size={18} />
+                <span className="hero-link-icon resume-download-icon">
+                  <FaDownload size={17} />
                 </span>
-                <span className="btn-label">Download Resume</span>
+                <span className="hero-link-text">Download Resume</span>
+              </a>
+
+              <a
+                href={myDetails.gitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-link-btn hero-github"
+                aria-label="GitHub Profile"
+                title="GitHub Profile"
+              >
+                <span className="hero-link-icon">
+                  <FaGithub size={20} />
+                </span>
+                <span className="hero-link-text">GitHub</span>
+                <FiExternalLink className="hero-link-arrow" size={14} />
               </a>
             </div>
           </div>

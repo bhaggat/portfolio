@@ -7,12 +7,7 @@ import {
 } from "../constants/constants";
 import { getSocialIcon, getTechIcon } from "../utils/icons";
 import { getAssetUrl } from "../utils/assets";
-import {
-  FiCode,
-  FiExternalLink,
-  FiCheckCircle,
-  FiStar,
-} from "react-icons/fi";
+import { FiCode, FiExternalLink, FiCheckCircle, FiStar } from "react-icons/fi";
 import "./Projects.css";
 
 interface Project {
@@ -23,11 +18,17 @@ interface Project {
     githubLink?: string;
     playStoreLink?: string;
     appStore?: string;
+    chromeWebStoreLink?: string;
+    npmLink?: string;
+    vscodeLink?: string;
+    [key: string]: string | undefined;
   };
   highlights?: string[];
   technologies: string[];
   thumbnail?: string;
   showFullImage?: boolean;
+  invertImage?: boolean;
+  backgroundColor?: string;
 }
 
 interface ProjectCardProps {
@@ -49,6 +50,8 @@ const ProjectCard = ({
     : project.technologies.slice(0, 4);
 
   const hiddenCount = project.technologies.length - 4;
+  const shouldInvert =
+    project.invertImage || project.title.toLowerCase().includes("nda");
 
   return (
     <div className="project-card">
@@ -59,17 +62,23 @@ const ProjectCard = ({
           {project.links &&
             Object.entries(project.links).map(([key, url]) => {
               if (!url) return null;
-              const { icon: Icon, color } = getSocialIcon(key);
+              const { icon: Icon, color, defaultLabel } = getSocialIcon(key, url);
               const label =
                 key === "webLink"
                   ? "Live Web"
                   : key === "githubLink"
                   ? "GitHub"
-                  : key === "playStoreLink"
+                  : key === "playStoreLink" || key === "playStore" || key === "android" || key === "androidLink"
                   ? "Play Store"
                   : key === "appStore"
                   ? "App Store"
-                  : key;
+                  : key === "chromeWebStoreLink" || key === "chromeWebStore"
+                  ? "Chrome Web Store"
+                  : key === "npmLink"
+                  ? "NPM Package"
+                  : key === "vscodeLink"
+                  ? "VS Code Extension"
+                  : defaultLabel || key;
 
               return (
                 <a
@@ -80,11 +89,16 @@ const ProjectCard = ({
                   className="project-link-btn"
                   aria-label={label}
                   title={label}
+                  style={
+                    {
+                      "--btn-brand-color": color,
+                    } as React.CSSProperties
+                  }
                 >
                   {Icon ? (
-                    <Icon size={14} style={{ color }} />
+                    <Icon size={16} style={{ color }} />
                   ) : (
-                    <FiExternalLink size={14} />
+                    <FiExternalLink size={16} />
                   )}
                   <span className="link-tooltip">{label}</span>
                 </a>
@@ -99,12 +113,21 @@ const ProjectCard = ({
 
         {/* Thumbnail displaying whole icon without cropping */}
         {project.thumbnail && !imgError ? (
-          <div className="project-thumbnail">
+          <div
+            className="project-thumbnail"
+            style={
+              project.backgroundColor
+                ? { backgroundColor: project.backgroundColor }
+                : undefined
+            }
+          >
             <img
               src={getAssetUrl(`assets/projects/${project.thumbnail}`)}
               alt={project.title}
               onError={() => setImgError(true)}
-              className="project-thumbnail-img"
+              className={`project-thumbnail-img ${
+                shouldInvert ? "invert-dark-img" : ""
+              }`}
               loading="lazy"
             />
             <div className="thumbnail-overlay" />
@@ -224,7 +247,8 @@ const Projects = () => {
           </div>
           <h2 className="section-title">Featured Projects</h2>
           <p className="projects-subtitle">
-            A showcase of web applications, mobile apps, developer tools, and enterprise systems I've architected &amp; built.
+            A showcase of web applications, mobile apps, developer tools, and
+            enterprise systems I've architected &amp; built.
           </p>
         </div>
 
@@ -232,7 +256,9 @@ const Projects = () => {
         <div className="company-group" style={{ marginBottom: "4rem" }}>
           <div className="company-group-header">
             <div className="company-group-dot personal-dot" />
-            <span className="company-group-title">Personal Projects &amp; Open Source</span>
+            <span className="company-group-title">
+              Personal Projects &amp; Open Source
+            </span>
             <div className="company-group-header-line" />
           </div>
           <div className="projects-grid">
@@ -248,7 +274,10 @@ const Projects = () => {
         </div>
 
         {/* 2. Professional Work Section */}
-        <div className="section-label" style={{ marginTop: "1rem", marginBottom: "3.5rem" }}>
+        <div
+          className="section-label"
+          style={{ marginTop: "1rem", marginBottom: "3.5rem" }}
+        >
           <div className="section-label-line" />
           <span className="section-label-badge">Professional Work</span>
           <div className="section-label-line right" />

@@ -191,94 +191,127 @@ export const skills = {
 export const personalProjects = [
   {
     title: "Split Easy",
-    description: "Effortlessly Split Expenses with Friends & Family.",
+    description:
+      "A sleek expense-sharing web & Android app to easily track shared expenses, split bills, and settle balances with friends & family.",
     highlights: [
-      "Expense Tracking: Easily add, categorize, and track expenses with detailed analytics.",
-      "Group Management: Create and manage multiple groups for different social circles.",
-      "Smart Bill Splitting: Automatically split bills equally, by percentage, or by custom amounts.",
+      "Expense Tracking: Add, categorize, and monitor shared expenses with real-time analytics and visual charts.",
+      "Group Management: Create and organize multiple groups for trips, households, and social circles.",
+      "Smart Bill Splitting: Split expenses equally, by percentage, or custom amounts with automated debt simplification.",
     ],
     technologies: ["React.js", "TypeScript", "CSS", "Firebase", "Firestore"],
     thumbnail: "split-easy.svg",
     showFullImage: true,
     links: {
-      webLink: "https://split-eazy.bhaggat.in/home",
+      webLink: "https://split-easy.bhaggat.in/home",
+      playStoreLink:
+        "https://play.google.com/store/apps/details?id=io.bhagatdhruv.spliteasy",
     },
   },
   {
     title: "Xpenso",
-    description: "A comprehensive offline expense management app.",
+    description:
+      "An offline-first personal finance app built with SQLite for instant expense tracking and intelligent spending insights.",
     highlights: [
-      "Developed an expense management app with offline data storage using SQLite.",
-      "Designed an intuitive interface with smart suggestions for expenses.",
+      "Offline Storage: High-performance SQLite database for zero-latency local expense storage and privacy.",
+      "Intuitive Spending UI: Smart expense categorization, automatic suggestions, and visual spending summaries.",
     ],
     technologies: ["Ionic 4", "React Native", "SQLite"],
     thumbnail: "xpenso.png",
     links: {
       webLink: "https://xpenso.bhaggat.in",
+      playStoreLink:
+        "https://play.google.com/store/apps/details?id=com.xpenso.app",
     },
   },
   {
     title: "Kachuful Score Tracker",
     description:
-      "A modern, responsive web application for tracking scores in the traditional Gujarati card game Kachuful.",
+      "A modern, responsive web & Android app with offline PWA support for tracking scores in the traditional Gujarati card game Kachuful.",
     highlights: [
-      "Multi-player support tracking up to 8 players simultaneously with flexible round patterns.",
-      "Progressive Web App (PWA) support with offline functionality and installable capabilities.",
-      "Smart scoring system with configurable rules, real-time tracking, and detailed game history.",
+      "Multi-Player Support: Track scores for up to 8 players simultaneously with flexible round-based rules.",
+      "Progressive Web App: Fully installable PWA featuring offline functionality and instant state recovery.",
+      "Smart Score Engine: Automated real-time score calculations, customizable game rules, and game history tracking.",
     ],
     technologies: ["React.js", "TypeScript", "CSS"],
     thumbnail: "kachuful.png",
     showFullImage: true,
     links: {
       webLink: "https://kachuful.bhaggat.in/home",
+      playStoreLink:
+        "https://play.google.com/store/apps/details?id=io.bhagatdhruv.kachuful",
+    },
+  },
+  {
+    title: "Rewriter AI",
+    description:
+      "Inline AI text assistant to rewrite, refine, or summarize text on any webpage using your own API keys.",
+    highlights: [
+      "Inline Text Rewriter: Select text on any webpage (Alt+Shift+R or context menu) to rewrite inline, fix grammar, adjust tone, or run custom AI prompts.",
+      "Multi-Model Chat Assistant: Toolbar popup supporting leading AI models (OpenAI, Gemini, Claude, Grok, Groq, Mistral, and OpenRouter).",
+      "Privacy-First & BYOK: Operates 100% client-side with no middleman servers; API keys are encrypted and stored locally.",
+    ],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Chrome Extension",
+      "OpenAI API",
+      "Gemini API",
+    ],
+    thumbnail: "rewriter-ai.png",
+    showFullImage: true,
+    links: {
+      webLink: "https://rewriter.bhaggat.in/",
+      chromeWebStoreLink:
+        "https://chromewebstore.google.com/detail/rewriter-ai/dfeikdphcfjnkdeolkcnblpdokkcddlm?authuser=0&hl=en-GB",
     },
   },
   {
     title: "Scheduled Website Opener",
     description:
-      "A Chrome extension that automates website opening based on a customizable schedule.",
+      "A productivity Chrome extension that automates website launching on customizable daily, weekly, or annual schedules.",
     highlights: [
-      "Set specific times to open websites automatically—daily, weekly, monthly, or annually.",
-      "Configure websites to launch immediately when Chrome opens.",
+      "Flexible Scheduling: Schedule specific URLs to open automatically on recurring times or dates.",
+      "Browser Startup Triggers: Configure key dashboards and links to launch automatically upon Chrome startup.",
     ],
     technologies: ["React.js", "Chrome Extension"],
     thumbnail: "chrome-schaduler.png",
     showFullImage: true,
     links: {
       webLink: "https://scheduler.bhaggat.in",
+      chromeWebStoreLink:
+        "https://chromewebstore.google.com/detail/scheduled-website-opener/fblmgicjhjgnocgdceoflhlnifngmngb",
     },
   },
   {
     title: "Git Pull Watched",
     description:
-      "A VS Code extension to automatically run database migrations and scripts when git pull changes files. Works with Prisma, Mongo, and more.",
+      "A developer productivity VS Code extension that automatically runs database migrations and custom scripts after git pull.",
     highlights: [
-      "Automatically detect changes in files like schema.prisma or package.json after a git pull.",
-      "Execute custom commands or built-in scripts to keep your development environment in sync.",
-      "Support for multiple environments and custom execution rules.",
+      "Auto File Detection: Detects changes in critical files like schema.prisma or package.json following git pull.",
+      "Custom Script Execution: Automatically triggers CLI commands or build scripts to keep dev environments synchronized.",
+      "Multi-Environment Support: Flexible per-repository configuration with custom execution rules.",
     ],
     technologies: ["VS Code Extension", "TypeScript", "Node.js"],
     thumbnail: "git-pull-watched.png",
     showFullImage: true,
     links: {
-      webLink:
+      vscodeLink:
         "https://marketplace.visualstudio.com/items?itemName=DhruvBhagat.git-pull-watched",
     },
   },
   {
     title: "React Native SMS Module",
     description:
-      "A modern React Native library for Android to fetch and monitor SMS messages with real-time event triggers.",
+      "A modern React Native library for Android to query, filter, and monitor incoming SMS messages with real-time event triggers.",
     highlights: [
-      "Real-time Listening: Monitor incoming SMS messages as they arrive on the device.",
-      "Inbox Access: Fetch SMS messages from the device inbox with advanced filtering options.",
-      "Modern Architecture: Built with support for React Native's latest TurboModule architecture.",
-      "Advanced Filtering: Filter messages by sender (phone number), specific keywords, date range, and read/unread status.",
+      "Real-Time SMS Listener: Subscribes to incoming SMS events with low-latency device event listeners.",
+      "Inbox Querying & Filtering: Advanced inbox searching by sender, keywords, date ranges, and read status.",
+      "TurboModule Architecture: Built with React Native's New Architecture for maximum native execution speed.",
     ],
     technologies: ["React Native", "NPM Package", "TypeScript"],
     thumbnail: "Npm-logo.svg.png",
     links: {
-      webLink: "https://www.npmjs.com/package/react-native-sms-module",
+      npmLink: "https://www.npmjs.com/package/react-native-sms-module",
       githubLink: "https://github.com/bhaggat/react-native-sms-module",
     },
   },
@@ -307,9 +340,6 @@ export const webosmoticProjects = [
       "AWS EC2",
     ],
     thumbnail: "guidy.png",
-    links: {
-      webLink: "https://staging.guidy.net/",
-    },
   },
   {
     title: "NDA Signed (Component Storybooks)",
@@ -367,10 +397,6 @@ export const webosmoticProjects = [
     ],
     technologies: ["React Native"],
     thumbnail: "Food-Detective-Logo.webp",
-    links: {
-      playStoreLink:
-        "https://play.google.com/store/apps/details?id=com.webosmotic.ingredient_analyzer",
-    },
   },
   {
     title: "Cultisan",
@@ -404,10 +430,7 @@ export const webosmoticProjects = [
       "Apple In-App Purchases",
     ],
     thumbnail: "welnes.webp",
-    links: {
-      playStoreLink: "https://play.google.com/store/apps/details?id=com.welnes",
-      appStore: "https://apps.apple.com/eg/app/welnes/id1513854681",
-    },
+    backgroundColor: "#0F5171",
   },
   {
     title: "AIoT Toolkit",
@@ -451,10 +474,6 @@ export const webosmoticProjects = [
     ],
     technologies: ["Flutter", "Firestore"],
     thumbnail: "fiction-frenzy-1-1.png",
-    links: {
-      playStoreLink:
-        "https://play.google.com/store/apps/details?id=com.webosmotic.fictionfrenzy",
-    },
   },
 ];
 
@@ -483,6 +502,7 @@ export const jeavioProjects = [
       "Patent-Pending Tech Process that transforms live data into measurable valuation intelligence.",
       "Enterprise-ready infrastructure that is SOC-II certified and procurement-ready.",
     ],
+    backgroundColor: "#FFFFFF",
     links: {
       webLink: "https://distinct.so/",
     },

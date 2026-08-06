@@ -182,7 +182,7 @@
   background: rgba(22, 22, 32, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(16px);
@@ -199,6 +199,7 @@
   right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 18px 18px 0 0;
   opacity: 0;
   transition: opacity 0.35s ease;
   z-index: 2;
@@ -220,6 +221,8 @@
 
 /* Card Header (Badge & Action Links) */
 .project-card-top {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -263,6 +266,8 @@
 
 /* Links Action Buttons */
 .project-links {
+  position: relative;
+  z-index: 20;
   display: flex;
   gap: 0.4rem;
 }
@@ -282,33 +287,47 @@
 }
 
 .project-link-btn:hover {
-  background: rgba(139, 92, 246, 0.2);
-  border-color: rgba(139, 92, 246, 0.5);
-  color: var(--primary);
+  background: color-mix(in srgb, var(--btn-brand-color, var(--primary)) 18%, rgba(255, 255, 255, 0.05));
+  border-color: color-mix(in srgb, var(--btn-brand-color, var(--primary)) 45%, transparent);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--btn-brand-color, var(--primary)) 25%, transparent);
   transform: translateY(-2px);
 }
 
 .link-tooltip {
   position: absolute;
-  bottom: -28px;
+  bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(4px);
-  background: #181824;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 0.68rem;
+  background: #11111a;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 0.7rem;
   font-weight: 600;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.28rem 0.6rem;
+  border-radius: 6px;
   white-space: nowrap;
   pointer-events: none;
   opacity: 0;
-  transition: all 0.2s ease;
-  z-index: 10;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 100;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+.link-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0 4px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.18) transparent transparent transparent;
 }
 
 .project-link-btn:hover .link-tooltip {
   opacity: 1;
+  visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
 
@@ -341,7 +360,7 @@
   overflow: hidden;
   margin-bottom: 1rem;
   height: 160px;
-  background: rgba(15, 15, 24, 0.7);
+  background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
   align-items: center;
@@ -355,6 +374,7 @@
   width: auto;
   height: auto;
   object-fit: contain;
+  transition: filter 0.3s ease;
 }
 
 .thumbnail-overlay {

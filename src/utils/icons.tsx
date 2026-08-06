@@ -51,6 +51,8 @@ import {
   SiNpm,
   SiCakephp,
 } from "react-icons/si";
+import { FiGlobe } from "react-icons/fi";
+import { VscVscode } from "react-icons/vsc";
 import { MdWeb, MdEmail, MdPayment, MdStorage, MdCloud } from "react-icons/md";
 
 export const getTechIcon = (techName: string) => {
@@ -182,7 +184,7 @@ export const getTechIcon = (techName: string) => {
   if (normalized.includes("cakephp"))
     return { icon: SiCakephp, color: "#D33C43" };
   if (normalized.includes("i18n")) return { icon: SiI18Next, color: "#26A69A" };
-  if (normalized.includes("vs code")) return { icon: MdWeb, color: "#007ACC" };
+  if (normalized.includes("vs code")) return { icon: VscVscode, color: "#007ACC" };
   if (normalized.includes("bluetooth"))
     return { icon: FaMobileAlt, color: "#0082FC" };
 
@@ -190,16 +192,86 @@ export const getTechIcon = (techName: string) => {
   return { icon: FaCheckCircle, color: "#6b7280" }; // Default icon instead of null
 };
 
-export const getSocialIcon = (linkType: string) => {
-  if (linkType.includes("github")) return { icon: FaGithub, color: "#fff" };
-  if (linkType.includes("linkedin"))
-    return { icon: FaLinkedin, color: "#0077B5" };
-  if (linkType.includes("email")) return { icon: MdEmail, color: "#EA4335" };
-  if (linkType.includes("web")) return { icon: MdWeb, color: "#38bdf8" }; // Cyan-400
-  if (linkType.includes("playstore") || linkType.includes("play store"))
-    return { icon: FaGooglePlay, color: "#3DDC84" };
-  if (linkType.includes("appstore") || linkType.includes("app store"))
-    return { icon: FaAppStore, color: "#0D96F6" };
+export const getSocialIcon = (linkType: string, url: string = "") => {
+  const normalizedKey = linkType.toLowerCase();
+  const normalizedUrl = url.toLowerCase();
 
-  return { icon: MdWeb, color: "#fff" };
+  // NPM Package
+  if (
+    normalizedKey.includes("npm") ||
+    normalizedKey.includes("package") ||
+    normalizedUrl.includes("npmjs.com")
+  ) {
+    return { icon: SiNpm, color: "#CB3837", defaultLabel: "NPM Package" };
+  }
+
+  // VS Code Extension / Marketplace
+  if (
+    normalizedKey.includes("vscode") ||
+    normalizedKey.includes("marketplace") ||
+    normalizedUrl.includes("marketplace.visualstudio.com")
+  ) {
+    return { icon: VscVscode, color: "#007ACC", defaultLabel: "VS Code Extension" };
+  }
+
+  // Chrome Web Store / Chrome Extension
+  if (
+    normalizedKey.includes("chrome") ||
+    normalizedUrl.includes("chromewebstore.google.com") ||
+    normalizedUrl.includes("chrome.google.com")
+  ) {
+    return { icon: FaChrome, color: "#4285F4", defaultLabel: "Chrome Web Store" };
+  }
+
+  // Google Play Store / Android App
+  if (
+    normalizedKey.includes("playstore") ||
+    normalizedKey.includes("play store") ||
+    normalizedKey.includes("android") ||
+    normalizedUrl.includes("play.google.com")
+  ) {
+    return { icon: FaGooglePlay, color: "#3DDC84", defaultLabel: "Play Store" };
+  }
+
+  // Apple App Store / iOS App
+  if (
+    normalizedKey.includes("appstore") ||
+    normalizedKey.includes("app store") ||
+    normalizedKey.includes("ios") ||
+    normalizedKey.includes("apple") ||
+    normalizedUrl.includes("apps.apple.com")
+  ) {
+    return { icon: FaAppStore, color: "#0D96F6", defaultLabel: "App Store" };
+  }
+
+  // GitHub Repository
+  if (
+    normalizedKey.includes("github") ||
+    normalizedKey.includes("gitlink") ||
+    normalizedUrl.includes("github.com")
+  ) {
+    return { icon: FaGithub, color: "#F0F6FC", defaultLabel: "GitHub" };
+  }
+
+  // LinkedIn
+  if (normalizedKey.includes("linkedin") || normalizedUrl.includes("linkedin.com")) {
+    return { icon: FaLinkedin, color: "#0077B5", defaultLabel: "LinkedIn" };
+  }
+
+  // Email
+  if (normalizedKey.includes("email") || normalizedUrl.startsWith("mailto:")) {
+    return { icon: MdEmail, color: "#EA4335", defaultLabel: "Email" };
+  }
+
+  // Live Website / Web App
+  if (
+    normalizedKey.includes("web") ||
+    normalizedKey.includes("site") ||
+    normalizedKey.includes("demo") ||
+    normalizedKey.includes("url")
+  ) {
+    return { icon: FiGlobe, color: "#38BDF8", defaultLabel: "Live Web" };
+  }
+
+  return { icon: FiGlobe, color: "#38BDF8", defaultLabel: "Link" };
 };

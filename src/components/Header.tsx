@@ -30,17 +30,19 @@ const Header = () => {
           Dhruv<span className="logo-accent">.</span>
         </a>
 
-        <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="nav-item"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="header-nav-wrapper">
+          <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="nav-item"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
         </div>
 
         <button

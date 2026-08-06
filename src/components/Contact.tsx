@@ -6,8 +6,6 @@ import {
   MdLocationOn,
 } from "react-icons/md";
 import {
-  FaLinkedin,
-  FaGithub,
   FaWhatsapp,
   FaCopy,
   FaCheck,
@@ -35,13 +33,13 @@ const Contact = () => {
             <FiStar className="badge-sparkle-icon" />
             <span>GET IN TOUCH</span>
           </div>
-          <h2 className="section-title">Let's Connect &amp; Work Together</h2>
+          <h2 className="section-title">Let's Connect &amp; Collaborate</h2>
           <p className="contact-subtitle">
-            I'm always open to discussing new opportunities, technical architecture, consulting, or project collaborations. Reach out via any of the channels below!
+            Open for technical leadership, full-stack development, architecture consulting, or full-time roles. Get in touch directly via email or phone!
           </p>
         </div>
 
-        {/* Contact Cards Grid */}
+        {/* Dedicated Contact Cards Grid */}
         <div className="contact-cards-grid">
           {/* Email Card */}
           <div className="contact-card">
@@ -100,7 +98,7 @@ const Contact = () => {
                 className="contact-action-btn whatsapp-btn"
               >
                 <FaWhatsapp size={14} />
-                <span>WhatsApp</span>
+                <span>WhatsApp Chat</span>
               </a>
               <button
                 type="button"
@@ -118,58 +116,21 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Location Card */}
+          {/* Location & Availability Card */}
           <div className="contact-card">
             <div className="contact-card-icon location-icon">
               <MdLocationOn size={26} />
             </div>
             <div className="contact-card-body">
-              <span className="contact-card-label">Location</span>
+              <span className="contact-card-label">Location &amp; Status</span>
               <span className="contact-card-value-static">
                 {myDetails.location}
               </span>
             </div>
             <div className="contact-card-status">
               <span className="status-dot" />
-              <span>Open to Remote &amp; Worldwide Work</span>
+              <span>Available for Remote &amp; Worldwide Roles</span>
             </div>
-          </div>
-        </div>
-
-        {/* Social Profiles Banner */}
-        <div className="contact-social-banner">
-          <h3 className="social-banner-title">Connect Across Networks</h3>
-          <div className="social-banner-links">
-            <a
-              href={myDetails.gitLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-banner-btn github"
-            >
-              <FaGithub size={18} />
-              <span>GitHub</span>
-              <span className="social-handle">@bhaggat</span>
-            </a>
-
-            <a
-              href={myDetails.linkedinLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-banner-btn linkedin"
-            >
-              <FaLinkedin size={18} />
-              <span>LinkedIn</span>
-              <span className="social-handle">in/bhagatdhruv</span>
-            </a>
-
-            <a
-              href={`mailto:${myDetails.email}`}
-              className="social-banner-btn email"
-            >
-              <MdEmail size={18} />
-              <span>Email</span>
-              <span className="social-handle">{myDetails.email}</span>
-            </a>
           </div>
         </div>
       </div>

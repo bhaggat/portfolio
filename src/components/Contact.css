@@ -54,7 +54,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 1;
 }
@@ -226,94 +226,8 @@
   50% { opacity: 1; transform: scale(1.25); }
 }
 
-/* ============================================================
-   SOCIAL PROFILES BANNER
-   ============================================================ */
-
-.contact-social-banner {
-  background: rgba(22, 22, 32, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 2rem;
-  text-align: center;
-  backdrop-filter: blur(12px);
-  position: relative;
-  z-index: 1;
-}
-
-.social-banner-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-}
-
-.social-banner-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.social-banner-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.65rem 1.25rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--text-primary);
-  font-size: 0.88rem;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  text-decoration: none;
-}
-
-.social-handle {
-  font-size: 0.76rem;
-  color: var(--text-secondary);
-  font-weight: 400;
-}
-
-.social-banner-btn:hover {
-  transform: translateY(-3px);
-}
-
-.social-banner-btn.github:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.social-banner-btn.linkedin:hover {
-  background: rgba(0, 119, 181, 0.15);
-  border-color: rgba(0, 119, 181, 0.4);
-  color: #38bdf8;
-}
-
-.social-banner-btn.email:hover {
-  background: rgba(234, 67, 53, 0.15);
-  border-color: rgba(234, 67, 53, 0.4);
-  color: #f87171;
-}
-
-/* ============================================================
-   RESPONSIVE DESIGN
-   ============================================================ */
-
 @media (max-width: 768px) {
   .contact-cards-grid {
     grid-template-columns: 1fr;
-  }
-
-  .social-banner-links {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .social-banner-btn {
-    width: 100%;
-    justify-content: center;
   }
 }
