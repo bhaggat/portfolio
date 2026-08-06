@@ -1,9 +1,9 @@
 {
   "name": "my-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "homepage": "https://me.bhaggat.in",
+  "homepage": "https://www.bhaggat.in",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
