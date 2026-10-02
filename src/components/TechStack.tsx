@@ -1,8 +1,8 @@
-import React from "react";
+import type { FC } from "react";
 import { getTechIcon } from "../utils/icons";
 import "./TechStack.css";
 
-const TechStack: React.FC = () => {
+const TechStack: FC = () => {
   const techLogos = [
     { name: "React", category: "Frontend" },
     { name: "TypeScript", category: "Code Quality" },

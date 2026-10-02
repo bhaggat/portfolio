@@ -1,0 +1,40 @@
+# Dhruv Bhagat - Senior Full Stack Developer & Technical Lead
+
+> Portfolio: https://www.bhaggat.in
+> GitHub: https://github.com/bhaggat
+> LinkedIn: https://www.linkedin.com/in/bhagatdhruv/
+> Email: dhruvbhagat98@gmail.com
+> Location: Surat, Gujarat, India (Available for Remote Worldwide)
+
+## Summary
+Senior Full Stack Developer and Technical Team Leader with over 8 years of experience in the IT industry, specializing in modern web and mobile applications. Extensive expertise in React.js, React Native, Node.js, TypeScript, AWS, and Firebase. Proven track record in architectural design, team leadership, cross-functional collaboration, and delivering scalable enterprise and consumer applications.
+
+## Technical Skills
+- **Frontend**: React.js, React Native, TypeScript, Flutter, Ionic 5, Angular, HTML5, CSS3, JavaScript (ES6+), Redux Toolkit, RTK Query, Context API
+- **Backend & APIs**: Node.js, Next.js, Express.js, REST APIs, Microservices, Serverless
+- **Databases & Cache**: MongoDB, SQLite, Redis, InfluxDB, PostgreSQL
+- **Cloud & DevOps**: AWS (EC2, S3, CloudFront, ECS, Rekognition, Cognito), Docker, GitHub Actions, GitLab CI/CD
+- **Real-Time & Integrations**: Socket.io, Pusher.js, Agora.io, Firebase (Auth, Firestore, Realtime Database, Cloud Messaging, Storage)
+- **Payments**: Stripe, Razorpay, Google In-App Purchases, Apple In-App Purchases
+- **Testing & Quality**: Jest, Storybook, Vitest, Playwright, ESLint, Prettier, WCAG 2.1 Accessibility
+
+## Featured Projects
+- **Split Easy**: Expense-sharing web & Android application to track shared expenses, split bills, and settle balances. Built with React.js, TypeScript, and Firebase. Web: https://split-easy.bhaggat.in/home | Android: https://play.google.com/store/apps/details?id=io.bhagatdhruv.spliteasy
+- **Xpenso**: Offline-first personal finance mobile application with local SQLite storage for high performance and privacy. Built with React Native, Ionic, and SQLite. Web: https://xpenso.bhaggat.in
+- **Kachuful Score Tracker**: Modern, responsive web & Android PWA for tracking scores in the Gujarati card game Kachuful with automated score calculations. Web: https://kachuful.bhaggat.in/home
+- **Rewriter AI**: Inline AI browser assistant to rewrite, refine, or summarize text on any webpage using personal API keys. Web: https://rewriter.bhaggat.in/
+- **Scheduled Website Opener**: Productivity Chrome extension that automates website launching on customizable daily, weekly, or annual schedules. Web: https://scheduler.bhaggat.in
+- **Git Pull Watched**: VS Code extension that automatically runs database migrations and scripts following git pull.
+- **React Native SMS Module**: Modern React Native TurboModule for Android to query, filter, and monitor incoming SMS messages.
+- **Distinct**: Live Data Intelligence platform for Global Brands with real-time valuation intelligence and AWS Rekognition. Built at Jeavio. Web: https://distinct.so/
+
+## Work Experience
+- **Jeavio Private Limited** (Jan 2025 - Present) - Senior Software Engineer (Remote): Architecting scalable backend systems, AWS Rekognition integration, microservices, and technical leadership.
+- **Webosmotic Pvt. Ltd.** (Sept 2022 - Nov 2024) - Technical Team Leader: Led cross-functional developer teams, project roadmaps, AWS cloud infrastructure, and 5+ mobile app store launches.
+- **Webosmotic Pvt. Ltd.** (Jul 2021 - Sept 2022) - Senior Software Developer: Real-time live streaming and messaging using Socket.io, Firebase, Agora.io, and frontend/backend optimization.
+- **Webosmotic Pvt. Ltd.** (Jul 2019 - Jul 2021) - Mobile Application Developer: Built and deployed hybrid and cross-platform mobile apps using Ionic and React Native.
+- **Bcube Solutions** (Jan 2018 - Jul 2019) - App & Web Developer: Built responsive web applications and PWAs.
+
+## Education
+- **Master of Computer Applications (MCA Integrated)**, Bhagwan Mahavir College Of Management, Surat (2013 - 2018)
+- **HSC (Gujarat Board)**, T & TV Nanpura School, Surat (2011 - 2013)

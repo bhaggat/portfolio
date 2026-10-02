@@ -97,10 +97,10 @@
   color: #c084fc;
 }
 
-.contact-card-icon.phone-icon {
-  background: rgba(6, 182, 212, 0.12);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  color: #22d3ee;
+.contact-card-icon.linkedin-icon {
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: #38bdf8;
 }
 
 .contact-card-icon.location-icon {
@@ -176,15 +176,15 @@
   box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
 }
 
-.contact-action-btn.whatsapp-btn {
-  background: rgba(37, 211, 102, 0.15);
-  border-color: rgba(37, 211, 102, 0.35);
-  color: #25d366;
+.contact-action-btn.linkedin-btn {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.35);
+  color: #38bdf8;
   flex: 1;
 }
 
-.contact-action-btn.whatsapp-btn:hover {
-  background: rgba(37, 211, 102, 0.25);
+.contact-action-btn.linkedin-btn:hover {
+  background: rgba(14, 165, 233, 0.25);
   transform: translateY(-2px);
 }
 

@@ -2,11 +2,10 @@ import { useState } from "react";
 import { myDetails } from "../constants/constants";
 import {
   MdEmail,
-  MdPhone,
   MdLocationOn,
 } from "react-icons/md";
 import {
-  FaWhatsapp,
+  FaLinkedin,
   FaCopy,
   FaCheck,
 } from "react-icons/fa";
@@ -35,7 +34,7 @@ const Contact = () => {
           </div>
           <h2 className="section-title">Let's Connect &amp; Collaborate</h2>
           <p className="contact-subtitle">
-            Open for technical leadership, full-stack development, architecture consulting, or full-time roles. Get in touch directly via email or phone!
+            Open for technical leadership, full-stack development, architecture consulting, or full-time roles. Get in touch directly via email or LinkedIn!
           </p>
         </div>
 
@@ -79,35 +78,40 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Phone / WhatsApp Card */}
+          {/* LinkedIn Profile Card */}
           <div className="contact-card">
-            <div className="contact-card-icon phone-icon">
-              <MdPhone size={26} />
+            <div className="contact-card-icon linkedin-icon">
+              <FaLinkedin size={26} />
             </div>
             <div className="contact-card-body">
-              <span className="contact-card-label">Phone &amp; WhatsApp</span>
-              <a href={`tel:${myDetails.phone}`} className="contact-card-value">
-                {myDetails.phone}
+              <span className="contact-card-label">LinkedIn Profile</span>
+              <a
+                href={myDetails.linkedinLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card-value"
+              >
+                in/bhagatdhruv
               </a>
             </div>
             <div className="contact-card-actions">
               <a
-                href={myDetails.whatsapp}
+                href={myDetails.linkedinLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-action-btn whatsapp-btn"
+                className="contact-action-btn primary linkedin-btn"
               >
-                <FaWhatsapp size={14} />
-                <span>WhatsApp Chat</span>
+                <FiSend size={14} />
+                <span>Connect</span>
               </a>
               <button
                 type="button"
                 className="contact-action-btn icon-only"
-                onClick={() => handleCopy(myDetails.phone, "phone")}
-                title="Copy Phone Number"
-                aria-label="Copy Phone Number"
+                onClick={() => handleCopy(myDetails.linkedinLink, "linkedin")}
+                title="Copy LinkedIn URL"
+                aria-label="Copy LinkedIn URL"
               >
-                {copiedField === "phone" ? (
+                {copiedField === "linkedin" ? (
                   <FaCheck size={14} style={{ color: "#34d399" }} />
                 ) : (
                   <FaCopy size={14} />

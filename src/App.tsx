@@ -1,3 +1,4 @@
+import { useSyncExternalStore } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import TechStack from "./components/TechStack";
@@ -11,10 +12,18 @@ import ScrollToTop from "./components/ScrollToTop";
 import Background3D from "./components/3d/Background3D";
 import "./App.css";
 
+const emptySubscribe = () => () => {};
+
 function App() {
+  const isClient = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
+
   return (
     <div className="app-container">
-      <Background3D />
+      {isClient && <Background3D />}
       <Header />
       <Hero />
       <TechStack />
@@ -24,9 +33,10 @@ function App() {
       <Education />
       <Contact />
       <Footer />
-      <ScrollToTop />
+      {isClient && <ScrollToTop />}
     </div>
   );
 }
 
 export default App;
+

@@ -5,8 +5,6 @@ export const myDetails = {
   gitLink: "https://github.com/bhaggat",
   linkedinLink: "https://www.linkedin.com/in/bhagatdhruv/",
   email: "dhruvbhagat98@gmail.com",
-  phone: "+91-7990850502",
-  whatsapp: "https://wa.me/917990850502",
   avatar: "dhruv.jpeg",
   resume: "Dhruv MERN CV.pdf",
   summary: [
