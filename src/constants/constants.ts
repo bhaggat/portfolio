@@ -240,6 +240,30 @@ export const personalProjects = [
     },
   },
   {
+    title: "FocusMask",
+    description:
+      "A Chrome extension that plays one-click focus sounds (brown, pink & white noise, nature) and auto-pauses whenever another tab plays audio.",
+    highlights: [
+      "Smart Auto-Pause: Detects audible tabs and pauses for calls or videos, resuming when they go quiet; also pauses on screen lock.",
+      "Offline & Private: 8 procedurally synthesized sounds via Web Audio, custom uploads in IndexedDB, no trackers, 106 KB package.",
+      "Focus Tools: Break reminders with chime countdown, sleep timer, toolbar badge, and headphone/media-key control.",
+    ],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Chrome Extension",
+      "Web Audio API",
+      "IndexedDB",
+      "Playwright",
+    ],
+    thumbnail: "focusmask.png",
+    showFullImage: true,
+    links: {
+      webLink: "https://focusmask.bhaggat.in",
+      githubLink: "https://github.com/bhaggat/focus-mask-extension",
+    },
+  },
+  {
     title: "Rewriter AI",
     description:
       "Inline AI text assistant to rewrite, refine, or summarize text on any webpage using your own API keys.",
