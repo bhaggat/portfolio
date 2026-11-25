@@ -261,6 +261,8 @@ export const personalProjects = [
     links: {
       webLink: "https://focusmask.bhaggat.in",
       githubLink: "https://github.com/bhaggat/focus-mask-extension",
+      chromeWebStoreLink:
+        "https://chromewebstore.google.com/detail/focusmask-%E2%80%93-focus-sounds/fbbgelepmidgecbhggehgkldeommhpma?hl=en-GB&authuser=0",
     },
   },
   {
