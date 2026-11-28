@@ -1,5 +1,6 @@
 import { myDetails } from "../constants/constants";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { getAssetUrl } from "../utils/assets";
+import { FaLinkedin, FaGithub, FaEnvelope, FaDownload } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -26,6 +27,25 @@ const Footer = () => {
             title="GitHub"
           >
             <FaGithub size={20} />
+          </a>
+          <a
+            href={`mailto:${myDetails.email}`}
+            className="footer-social-link"
+            aria-label="Send Email"
+            title="Email"
+          >
+            <FaEnvelope size={18} />
+          </a>
+          <a
+            href={getAssetUrl(`assets/${myDetails.resume}`)}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="footer-social-link"
+            aria-label="Download Resume"
+            title="Download Resume"
+          >
+            <FaDownload size={17} />
           </a>
         </div>
         <div className="footer-text">

@@ -17,7 +17,18 @@ const Experience = () => {
                   <div className="timeline-header-row">
                     <div>
                       <h3 className="role">{exp.role}</h3>
-                      <span className="company">{exp.company}</span>
+                      {exp.companyUrl ? (
+                        <a
+                          href={exp.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="company company-link"
+                        >
+                          {exp.company}
+                        </a>
+                      ) : (
+                        <span className="company">{exp.company}</span>
+                      )}
                     </div>
                     {exp.logo && (
                       <div className="company-logo-wrapper">

@@ -6,6 +6,7 @@ import {
 } from "react-icons/md";
 import {
   FaLinkedin,
+  FaGithub,
   FaCopy,
   FaCheck,
 } from "react-icons/fa";
@@ -112,6 +113,48 @@ const Contact = () => {
                 aria-label="Copy LinkedIn URL"
               >
                 {copiedField === "linkedin" ? (
+                  <FaCheck size={14} style={{ color: "#34d399" }} />
+                ) : (
+                  <FaCopy size={14} />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* GitHub Profile Card */}
+          <div className="contact-card">
+            <div className="contact-card-icon github-icon">
+              <FaGithub size={26} />
+            </div>
+            <div className="contact-card-body">
+              <span className="contact-card-label">GitHub Profile</span>
+              <a
+                href={myDetails.gitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card-value"
+              >
+                github.com/bhaggat
+              </a>
+            </div>
+            <div className="contact-card-actions">
+              <a
+                href={myDetails.gitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-action-btn primary github-btn"
+              >
+                <FiSend size={14} />
+                <span>View Profile</span>
+              </a>
+              <button
+                type="button"
+                className="contact-action-btn icon-only"
+                onClick={() => handleCopy(myDetails.gitLink, "github")}
+                title="Copy GitHub URL"
+                aria-label="Copy GitHub URL"
+              >
+                {copiedField === "github" ? (
                   <FaCheck size={14} style={{ color: "#34d399" }} />
                 ) : (
                   <FaCopy size={14} />

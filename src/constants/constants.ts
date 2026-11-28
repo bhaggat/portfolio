@@ -18,6 +18,7 @@ export const workExperience = [
   {
     role: "Senior Software Engineer",
     company: "Jeavio Private Limited",
+    companyUrl: "https://jeavio.com",
     logo: "jeavio.png",
     location: "Remote",
     start: "Jan 13, 2025",
@@ -33,6 +34,7 @@ export const workExperience = [
   {
     role: "Technical Team Leader",
     company: "Webosmotic Pvt. Ltd.",
+    companyUrl: "https://webosmotic.com/",
     logo: "webosmotic.png",
     location: "Surat",
     start: "Sept 2022",
@@ -47,6 +49,7 @@ export const workExperience = [
   {
     role: "Senior Software Developer",
     company: "Webosmotic Pvt. Ltd.",
+    companyUrl: "https://webosmotic.com/",
     logo: "webosmotic.png",
     location: "Surat",
     start: "Jul 2021",
@@ -61,6 +64,7 @@ export const workExperience = [
   {
     role: "Mobile Application Developer",
     company: "Webosmotic Pvt. Ltd.",
+    companyUrl: "https://webosmotic.com/",
     logo: "webosmotic.png",
     location: "Surat",
     start: "Jul 2019",
@@ -73,6 +77,7 @@ export const workExperience = [
   {
     role: "App & Web Developer",
     company: "Bcube Solutions",
+    companyUrl: "https://bcubesolutions.com/",
     logo: "bcube.gif",
     location: "Surat",
     start: "July 2018",
@@ -85,6 +90,7 @@ export const workExperience = [
   {
     role: "Intern",
     company: "Bcube Solutions",
+    companyUrl: "https://bcubesolutions.com/",
     logo: "bcube.gif",
     location: "Surat",
     start: "Jan 2018",
@@ -218,7 +224,7 @@ export const personalProjects = [
     links: {
       webLink: "https://xpenso.bhaggat.in",
       playStoreLink:
-        "https://play.google.com/store/apps/details?id=com.xpenso.app",
+        "https://play.google.com/store/apps/details?id=io.bhagatdhruv.xpenso2",
     },
   },
   {
@@ -285,6 +291,7 @@ export const personalProjects = [
     showFullImage: true,
     links: {
       webLink: "https://rewriter.bhaggat.in/",
+      githubLink: "https://github.com/bhaggat/rewriter-ai",
       chromeWebStoreLink:
         "https://chromewebstore.google.com/detail/rewriter-ai/dfeikdphcfjnkdeolkcnblpdokkcddlm?authuser=0&hl=en-GB",
     },
@@ -302,8 +309,9 @@ export const personalProjects = [
     showFullImage: true,
     links: {
       webLink: "https://scheduler.bhaggat.in",
+      githubLink: "https://github.com/bhaggat/chrome-scheduler",
       chromeWebStoreLink:
-        "https://chromewebstore.google.com/detail/scheduled-website-opener/fblmgicjhjgnocgdceoflhlnifngmngb",
+        "https://chromewebstore.google.com/detail/scheduled-website-opener/peimippheccjbhianpahacphickkbbjl?authuser=0&hl=en-GB",
     },
   },
   {

@@ -116,6 +116,17 @@
   display: block;
 }
 
+.company-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.company-link:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
 .duration, .location {
   font-size: 0.9rem;
   color: var(--text-secondary);
